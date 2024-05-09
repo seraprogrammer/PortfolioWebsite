@@ -1,0 +1,42 @@
+.about_me {
+  width: 100%;
+  height: 100vh;
+}
+.abt_header p {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+}
+.about_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 90px;
+  padding-top: 125px;
+}
+.about_content img {
+  width: 255px;
+  border-radius: 15px;
+}
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.about_content_dis {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.about_content_dis p {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+}
+.title_dis h3 {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
