@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nazmul Hossain</title>
-  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png">
+  <link rel="icon" type="image/x-icon" href="./data/photos/favicon.png">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/Responsive.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/Skills.css">
+  <link rel="stylesheet" href="./css/Qualifications.css">
+  <link rel="stylesheet" href="./css/project.css">
+  <link rel="stylesheet" href="./css/Contact.css">
+  <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-  <!--  Gsap is needed for Basic Effects -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- Scroll Trigger is needed for Scroll Effects -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="./css/hero.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
@@ -33,181 +36,324 @@
       </div>
       <div id="header" class="header">
         <ul>
-          <li><a href="#hero"><i class="ri-home-2-line"></i>Home</a></li>
-          <li><a href="#about"><i class="ri-user-line"></i>About</a></li>
-          <li><a href="#Skills_content"><i class="ri-police-badge-line"></i>Skills</a></li>
-          <li><a href=""><i class="ri-pushpin-line"></i>Qualifications</a></li>
-          <li><a href=""><i class="ri-vip-crown-2-line"></i>Projects</a></li>
-          <li><a href=""><i class="ri-chat-1-line"></i>Contact Me</a></li>
+          <li><a data-scroll-to href="#hero"><i class="ri-home-2-line"></i>Home</a></li>
+          <li><a data-scroll-to href="#about"><i class="ri-user-line"></i>About</a></li>
+          <li><a data-scroll-to href="#Skills_content"><i class="ri-police-badge-line"></i>Skills</a></li>
+          <li><a data-scroll-to href="#Qualifications"><i class="ri-pushpin-line"></i>Qualifications</a></li>
+          <li><a data-scroll-to href="#project"><i class="ri-vip-crown-2-line"></i>Projects</a></li>
+          <li><a data-scroll-to href="#Contact"><i class="ri-chat-1-line"></i>Contact Me</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <section id="hero" class="hero">
-    <svg width="27" height="29" data-depth="0.3" class="layer p1 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;">
-      <path
-        d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
-        fill="#FFD15C" fill-rule="evenodd"></path>
-    </svg>
 
-    <svg width="26" height="26" data-depth="0.2" class="layer p2 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none"
-        fill-rule="evenodd"></path>
-    </svg>
-
-
-
-    <svg width="15" height="23" data-depth="0.6" class="layer p4 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(1.37569px, -0.664661px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C"
-        fill-rule="evenodd">
-      </rect>
-    </svg>
-
-    <svg width="15" height="23" data-depth="0.2" class="layer p5 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
-        fill-rule="evenodd">
-      </rect>
-    </svg>
-
-    <svg width="49" height="17" data-depth="0.5" class="layer p6 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(1.14641px, -0.553884px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <g fill="#FF4C60" fill-rule="evenodd">
+  <div id="smooth-content" class="scroll-container">
+    <section id="hero" class="hero">
+      <svg width="27" height="29" data-depth="0.3" class="layer p1 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;">
         <path
-          d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z">
-        </path>
+          d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
+          fill="#FFD15C" fill-rule="evenodd"></path>
+      </svg>
+
+      <svg width="26" height="26" data-depth="0.2" class="layer p2 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none"
+          fill-rule="evenodd"></path>
+      </svg>
+
+
+
+      <svg width="15" height="23" data-depth="0.6" class="layer p4 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(1.37569px, -0.664661px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C"
+          fill-rule="evenodd">
+        </rect>
+      </svg>
+
+      <svg width="15" height="23" data-depth="0.2" class="layer p5 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
+          fill-rule="evenodd">
+        </rect>
+      </svg>
+
+      <svg width="49" height="17" data-depth="0.5" class="layer p6 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(1.14641px, -0.553884px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <g fill="#FF4C60" fill-rule="evenodd">
+          <path
+            d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z">
+          </path>
+          <path
+            d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z">
+          </path>
+        </g>
+      </svg>
+
+      <svg width="26" height="26" data-depth="0.4" class="layer p7 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.917128px, -0.443107px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none"
+          fill-rule="evenodd"></path>
+      </svg>
+
+      <svg width="19" height="21" data-depth="0.3" class="layer p8 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
+          fill-rule="evenodd"></rect>
+      </svg>
+
+      <svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9 hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
         <path
-          d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z">
-        </path>
-      </g>
-    </svg>
+          d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z"
+          fill="#6C6CE5" fill-rule="evenodd"></path>
+      </svg>
 
-    <svg width="26" height="26" data-depth="0.4" class="layer p7 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.917128px, -0.443107px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none"
-        fill-rule="evenodd"></path>
-    </svg>
+      <svg width="47" height="29" data-depth="0.2" class="layer p10 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
+        <g fill="#44D7B6" fill-rule="evenodd">
+          <path
+            d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z">
+          </path>
+          <path
+            d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z">
+          </path>
+        </g>
+      </svg>
 
-    <svg width="19" height="21" data-depth="0.3" class="layer p8 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
-        fill-rule="evenodd"></rect>
-    </svg>
-
-    <svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9 hidden"
-      xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.687846px, -0.332331px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <path
-        d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z"
-        fill="#6C6CE5" fill-rule="evenodd"></path>
-    </svg>
-
-    <svg width="47" height="29" data-depth="0.2" class="layer p10 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(0.458564px, -0.221554px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <g fill="#44D7B6" fill-rule="evenodd">
+      <svg width="33" height="20" data-depth="0.5" class="layer p11 hidden" xmlns="http://www.w3.org/2000/svg"
+        style="transform: translate3d(1.14641px, -0.553884px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
         <path
-          d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z">
-        </path>
-        <path
-          d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z">
-        </path>
-      </g>
-    </svg>
-
-    <svg width="33" height="20" data-depth="0.5" class="layer p11 hidden" xmlns="http://www.w3.org/2000/svg"
-      style="transform: translate3d(1.14641px, -0.553884px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">
-      <path
-        d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z"
-        fill="#FFD15C" fill-rule="evenodd"></path>
-    </svg>
-    <div class="img_container">
-      <img class="img" src="/data/photos/profile photo.jpg" alt="">
-    </div>
-    <div class="hero_about">
-      <h1 class="name">Nazmul Hossain</h1>
-      <p class="skills">Im a <span id="typewriter"></span><span class="type_style">|</span> Developer
-      </p>
-
-    </div>
-    <div class="s_icons">
-      <ul class="social-icons light list-inline mb-0 text-center">
-        <li class="list-inline-item">
-          <a href="http://instagram.com/username" target="_blank">
-            <i class="ri-instagram-line"></i> </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="http://twitter.com/username" target="_blank">
-            <i class="ri-twitter-line"></i> </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="http://behance.com/username" target="_blank">
-            <i class="ri-github-line"></i> </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="http://dribbble.com/username" target="_blank">
-            <i class="ri-linkedin-fill"></i> </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="http://pinterest.com/username" target="_blank">
-            <i class="ri-facebook-circle-line"></i> </a>
-        </li>
-      </ul>
-    </div>
-    <div class="btn">
-      <button>Hire Me<i class="ri-arrow-right-up-line"></i></button>
-    </div>
-    <div>
-      <p class="Scroll">Scroll Down</p>
-      <span class="mouse">
-        <span class="wheel"></span>
-      </span>
-    </div>
-  </section>
-
-  <section id="about" class="about_me">
-    <div class="abt_header">
-      <p class="about_me_eff">About Me</p>
-    </div>
-
-
-    <div class="about_content">
-      <div class="image">
-        <img src="./data/photos/profile photo.jpg" alt="">
+          d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z"
+          fill="#FFD15C" fill-rule="evenodd"></path>
+      </svg>
+      <div class="img_container">
+        <img class="img" src="./data/photos/profile photo.jpg" alt="">
       </div>
-      <div class="about_content_dis">
-
-        <div class="title_dis">
-          <h1>Nazmul Hossain</h1>
-          <h5>Full Stack Developer</h5>
-        </div>
-
-        <p>
-          I am a Full-Stack developer based in Natore, Bangladesh. I am
-          very
-          passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites
-          using
-          MERN Stack. Working for myself to improve my skills. Love to build Full-Stack clones.
+      <div class="hero_about">
+        <h1 class="name">Nazmul Hossain</h1>
+        <p class="skills">Im a <span id="typewriter"></span><span class="type_style">|</span> Developer
         </p>
-        <p>Email : example@gmail.com</p>
-        <p>Place : Natore, Bangladesh - 6400</p>
+
       </div>
-    </div>
+      <div class="s_icons">
+        <ul class="social-icons light list-inline mb-0 text-center">
+          <li class="list-inline-item">
+            <a href="http://instagram.com/username" target="_blank">
+              <i class="ri-instagram-line"></i> </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://twitter.com/username" target="_blank">
+              <i class="ri-twitter-line"></i> </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://behance.com/username" target="_blank">
+              <i class="ri-github-line"></i> </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://dribbble.com/username" target="_blank">
+              <i class="ri-linkedin-fill"></i> </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://pinterest.com/username" target="_blank">
+              <i class="ri-facebook-circle-line"></i> </a>
+          </li>
+        </ul>
+      </div>
+      <div class="btn">
+        <button>Hire Me<i class="ri-arrow-right-up-line"></i></button>
+      </div>
+      <div>
+        <p class="Scroll">Scroll Down</p>
+        <a href="#about"><span class="mouse">
+            <span class="wheel"></span>
+          </span></a>
+      </div>
+    </section>
 
-  </section>
+    <section id="about" class="about_me">
+      <div class="abt_header">
+        <p class="about_me_eff">ABOUT ME</p>
+      </div>
 
-  <section id="" class="Skills_content">
-    <p class="Skills_content_titlle">Skills & Abilities</p>
-    <div id="Skills_content">
 
-    </div>
-  </section>
+      <div class="about_content">
+        <div class="image scroll-container">
+          <img class="scroll-content" src="./data/photos/profile photo.jpg" alt="">
+        </div>
+        <div class="about_content_dis">
 
-  <script src="https://unpkg.com/scrollreveal"></script>
+          <div class="title_dis">
+            <h1>Nazmul Hossain</h1>
+            <h5>Full Stack Developer</h5>
+          </div>
+
+          <p>
+            I am a front-end developer based in Natore, Bangladesh. I am
+            very
+            passionate about improving my coding skills & developing applications & websites. I build WebApps and
+            Websites
+            using
+            MERN Stack. Working for myself to improve my skills. Love to build Full-Stack clones.
+          </p>
+          <p>Email : example@gmail.com</p>
+          <p>Place : Natore, Bangladesh - 6400</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="Skills_content" class="Skills_content">
+      <p class="Skills_content_titlle">SKILLS & ABILITIES</p>
+      <div id="Skills_content_show">
+
+      </div>
+    </section>
+
+    <section id="Qualifications" class="Qualifications">
+      <div class="Qualifications_tittle">
+        <h1>QUALIFICATIONS</h1>
+        <p>My Educational Qualification & Work Experience</p>
+
+      </div>
+      <div class="Qualifications_content">
+        <link
+          href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+
+        <!-- The Timeline -->
+
+        <ul class="timeline">
+
+          <!-- Item 1 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag">Dattapara Model Degree College</span>
+              </div>
+              <div class="desc">Higher Secondary Certificate<sub>comming soon</sub></div>
+            </div>
+          </li>
+
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="flag">Textile Institute, Natore</span>
+              </div>
+              <div class="desc">Secondary School Certificate<sub>4.89</sub></div>
+            </div>
+          </li>
+
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag">Kholabaria Primary School</span>
+              </div>
+              <div class="desc">Primary School Certificate <sub>4.42</sub></div>
+            </div>
+          </li>
+
+        </ul>
+
+
+      </div>
+    </section>
+
+    <section id="project" class="project">
+      <div class="project_title">
+        <h1>PROJECTS</h1>
+        <p>Most recent work</p>
+      </div>
+      <div class="project_content_par">
+        <div class="project_content">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="swiper-slide_child">
+                  <div class="swiper-slide_child_img">
+                    <img src="./data/photos/projects.png" alt="">
+                  </div>
+                  <div class="swiper-slide_child_dis">
+                    <h1>Personal Portfolio Website</h1>
+                    <p>Welcome to my personal portfolio website, where simplicity meets sophistication. Crafted
+                      exclusively with HTML, CSS, and
+                      JS, this platform showcases my skills and experiences through elegant design and seamless
+                      functionality.</p>
+                    <div class="swiper-slide_child_dis_btn">
+                      <a href="https://seraprogrammer.github.io/Portfolio-Website/"><button>Check out<i
+                            class="ri-send-backward"></i></button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact" class="Contact">
+      <div class="Contact_title">
+        <h1>CONSTACT US</h1>
+        <p>Most recent work</p>
+      </div>
+      <div class="Contact_content">
+        <div class="Contact_img">
+          <img src="./data/photos/3DCreative.png" alt="">
+        </div>
+        <div class="Contact_form_par">
+          <div class="Contact_form">
+            <div class="input-container">
+              <input id="email" type="text" placeholder="Email">
+              <i class="ri-mail-open-line icon"></i>
+            </div>
+            <div class="input-container">
+              <input id="name" type="text" placeholder="Name">
+              <i class="ri-user-line icon"></i>
+            </div>
+            <textarea name="" id="" placeholder="Text"></textarea>
+            <div class="Contact_btn">
+              <button>Send Message<i class="ri-mail-send-line"></i></button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footer_content">
+        <h3>Sera Programmer</h3>
+        <p>&copy; 2024 Nazmul Hossain. All rights reserved.</p>
+        <div class="social_links">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="scrollup" onclick="scrollToTop()">
+    <i class="ri-arrow-up-circle-line"></i>
+  </div>
+
+
   <script src="./data/js/Typewriter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
   <script src="app.js"></script>
 

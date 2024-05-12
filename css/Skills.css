@@ -2,14 +2,14 @@
   width: 100%;
   height: 100vh;
 }
-#Skills_content {
+#Skills_content_show {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-top: 138px;
+  padding-top: 205px;
 }
 #Skills_content ul li {
   list-style: none;

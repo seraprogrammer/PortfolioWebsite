@@ -1,56 +1,58 @@
-@media (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .hidden {
     opacity: 0;
   }
+  div#Skills_content_show {
+    padding-top: 20px;
+  }
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 769px) {
   .about_me {
-    height: auto; /* Adjust height to fit content */
-    padding: 20px; /* Add padding for better spacing */
+    height: auto;
+    padding: 20px;
   }
 
   .abt_header p {
-    font-size: 30px; /* Decrease font size for better readability */
+    font-size: 30px;
   }
 
   .about_content {
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Reduce gap between items */
-    padding-top: 50px; /* Adjust top padding */
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
     justify-content: center;
     align-items: center;
   }
 
   .about_content img {
-    width: 250px; /* Set fixed width for image */
-    border-radius: 50%; /* Make the image circular */
-    height: 250px; /* Set fixed height for image */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    object-fit: cover;
   }
 
   .image,
   .about_content_dis {
-    width: 100%; /* Make both sections full width */
-    align-items: center; /* Center content */
-    text-align: center; /* Center text content */
-    margin: auto; /* Center the sections horizontally */
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
     justify-content: center;
   }
 
   .about_content_dis {
-    gap: 15px; /* Reduce gap between text content */
+    gap: 15px;
   }
 
   .about_content_dis p {
-    width: 100%; /* Make text content full width */
+    width: 100%;
   }
 
   .title_dis h3 {
-    font-size: 20px; /* Decrease font size for better readability */
+    font-size: 20px;
   }
   section#Skills_content {
-    padding-top: 122px;
+    padding-top: 20px;
   }
 }

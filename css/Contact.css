@@ -1,0 +1,134 @@
+.Contact {
+  width: 100%;
+  height: 100vh;
+}
+.Contact_img {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  object-fit: cover;
+}
+.Contact_img img {
+  width: 300px;
+  object-fit: cover;
+}
+.Contact_content {
+  display: flex;
+}
+.Contact_form_par {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.input-container {
+  position: relative;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.input-container input[type="text"],
+input[type="email"] {
+  width: 320px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 52px;
+  padding-left: 35px;
+  color: #fff;
+  font-size: 17px;
+}
+textarea {
+  width: 320px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 150px;
+  color: #fff;
+  font-size: 17px;
+}
+.input-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.icon {
+  font-size: 20px; /* Adjust icon size as needed */
+}
+.Contact_btn {
+  padding-top: 15px;
+}
+.Contact_btn button {
+  width: 60px;
+}
+.Contact_btn button {
+  width: 170px;
+}
+i.ri-mail-send-line {
+  color: #000;
+  background: transparent;
+  padding-left: 6px;
+}
+.Contact_form_par {
+  width: 50%;
+}
+.Contact_title {
+  text-align: center;
+  color: #fff;
+}
+.Contact_form {
+  box-shadow: 0px 0px 1px 2px #312e56;
+  padding: 25px;
+}
+
+@media screen and (max-width: 769px) {
+  .Contact_content {
+    display: flex;
+    flex-direction: column;
+  }
+  .Contact_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .Contact_form_par {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+  .Contact {
+    width: 100%;
+    height: 100vh;
+    padding-top: 125px;
+  }
+  .Contact_img img {
+    display: none;
+  }
+  .Contact_form {
+    box-shadow: 0px 0px 1px 2px #312e56;
+    padding: 31px;
+    width: 80%;
+  }
+  .Contact_title {
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  textarea {
+    width: 380px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 150px;
+    color: #fff;
+    font-size: 17px;
+  }
+}

@@ -1,3 +1,28 @@
 html {
   scroll-behavior: smooth;
 }
+i.ri-arrow-up-circle-line {
+  color: #fff;
+  font-size: 30px;
+  position: sticky;
+  right: 28px;
+}
+.scrollup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #10ed5c; /* Change color as desired */
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.scrollup i {
+  font-size: 24px;
+  background-color: transparent;
+}
